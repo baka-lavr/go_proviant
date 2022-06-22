@@ -1,0 +1,9 @@
+<h5>Привет, {{.User.Client.Surname}} {{.User.Client.Name}}</h5>
+
+Ваш заказ:
+<ul>
+{{range .Products}}
+<li>{{.Name}} {{.Price}} руб. ({{.Amount}} {{.Meas_unit}})</li>
+{{end}}
+</ul>
+Сумма: {{.Total}} руб.
